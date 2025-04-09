@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 /* Import the Poppins font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --background: #ffffff;
@@ -21,9 +22,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #003E1F;
+    --background: #1C3255;
     /* 
     4F518C: Dark Purple
+    1C3255: Optiver Blue
+    003E1F: Forest Green
     
     */
     --foreground: #ededed;

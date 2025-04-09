@@ -1,4 +1,11 @@
+/*
+
+UNIMPLEMENTED - Use ResumeTabSystem
+
+*/
+
 import React from 'react';
+
 
 const ResumeSection: React.FC = () => {
   const projects = [

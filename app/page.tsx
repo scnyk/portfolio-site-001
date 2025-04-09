@@ -2,11 +2,14 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import ResumeSection from '../components/ResumeSection';
+import resumeData from './data/resumeData';
+import ResumeTabSystem from '@/components/ResumeTabSystem';
+
 
 export default function Home() {
   const [showScrollHint, setShowScrollHint] = useState(true);
 
+  
   useEffect(() => {
     const handleScroll = () => {
       // Hide the "scroll for more" section when the user scrolls past 100px
@@ -25,10 +28,10 @@ export default function Home() {
     <div>
       <div className="relative h-screen flex flex-col justify-between">
         {/* Main Content */}
-        <div className="h-screen flex flex-row justify-center items-center">
+        <div className="h-screen flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center">
 
           {/* Profile Image - Can be made circular, but the png itself is circular - Adobe Illustrator */}
-          <div className="flex justify-center items-center  ">
+          <div className="flex justify-center items-center lg:p-0 md:p-0 p-10">
             <Image
               src="/profile.png"
               alt="Profile"
@@ -40,17 +43,17 @@ export default function Home() {
           </div>
 
           {/* Text Section */}
-          <div className="ml-40 flex flex-col font-poppins flex justify-center items-center">
-            <h1 className="mb-2 text-[70px] font-[530]">samik nayak</h1>
-            <h1 className="text-[20px] font-[230]">
-              student @{' '}
-              <span className="text-[#FFC627]">arizona state{' '}</span>
-              <span className="text-[25px]">|</span>
-              <span>{' '}software developer @{' '}</span>
-              <span className="text-[#FF9900]">amazon</span>
+          <div className="lg:ml-40 md:ml-20 flex flex-col font-poppins flex justify-center items-center">
+            <h1 className="mb-2 lg:text-[70px] text-[50px] duration-300 font-[530]">Samik Nayak</h1>
+            <h1 className="lg:text-[25] text-[18px] font-[230]">
+              Student @{' '}
+              <span className="text-[#FFC627]">Arizona State{' '}</span>
+              <span className="">|</span>
+              <span>{' '}Software Developer @{' '}</span>
+              <span className="text-[#FF9900]">Amazon</span>
             </h1>
 
-            <div className="mt-5 flex flex-row gap-5 items-center">
+            <div className="mt-5 flex flex-row lg:gap-5 gap-2 duration-100 items-center">
               <a
                 href="https://github.com/scnyk"
                 target="_blank"
@@ -78,14 +81,16 @@ export default function Home() {
             showScrollHint ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          <p className="text-white-500 animate-bounce">check out my resume</p>
+          <p className="text-white-500 animate-bounce"><a href="#resume-section">check out my resume</a></p>
         </div>
       </div>
 
       {/* Next Section */}
-      <div className="py-20 min-h-screen bg-[#4F518C] flex flex-col justify-center items-center">
-        <h2 className="text-4xl font-[510] mb-10">work & projects</h2>
-        <ResumeSection />
+      <div id="resume-section" className="py-10 min-h-screen  flex flex-col justify-center items-center">
+        <ResumeTabSystem 
+          tabs={resumeData} 
+          initialActiveTab="about"
+        />
       </div>
     </div>
   );

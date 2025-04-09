@@ -1,0 +1,45 @@
+.downloadContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .downloadLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .downloadIcon {
+    color: #c3c3c3; /* Change this to match your theme */
+    transition: color 0.2s ease;
+  }
+  
+  .downloadLink:hover .downloadIcon {
+    color: #0070f3; /* Change this to match your theme */
+    transform: scale(1.1);
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 100;
+    animation: fadeIn 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
