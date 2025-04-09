@@ -1,20 +1,31 @@
 @import "tailwindcss";
 
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Set Poppins as the default sans-serif font */
+  --font-sans: 'Poppins', sans-serif;
+  --font-mono: 'Courier New', monospace; /* Keep a fallback for monospace fonts */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #003E1F;
+    /* 
+    4F518C: Dark Purple
+    
+    */
     --foreground: #ededed;
   }
 }
@@ -22,5 +33,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans); /* Use Poppins globally */
 }
