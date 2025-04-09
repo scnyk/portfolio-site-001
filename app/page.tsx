@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Next Section */}
       <div className="py-20 min-h-screen bg-[#4F518C] flex flex-col justify-center items-center">
-        <h2 className="text-4xl font-[510] mb-10">Work & Projects</h2>
+        <h2 className="text-4xl font-[510] mb-10">work & projects</h2>
         <ResumeSection />
       </div>
     </div>
