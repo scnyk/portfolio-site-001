@@ -44,8 +44,8 @@ export default function Home() {
 
           {/* Text Section */}
           <div className="lg:ml-40 md:ml-20 flex flex-col font-poppins flex justify-center items-center">
-            <h1 className="mb-2 lg:text-[70px] text-[50px] duration-300 font-[530]">Samik Nayak</h1>
-            <h1 className="lg:text-[25] text-[18px] font-[230]">
+            <h1 className="mb-2 lg:text-[70px] text-[50px] duration-300 font-[530] text-center">Samik Nayak</h1>
+            <h1 className="lg:text-[25px] text-[18px] font-[230] text-center">
               Student @{' '}
               <span className="text-[#FFC627]">Arizona State{' '}</span>
               <span className="">|</span>

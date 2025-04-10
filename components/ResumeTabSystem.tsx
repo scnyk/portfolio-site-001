@@ -34,20 +34,20 @@ const ResumeTabSystem: React.FC<ResumeTabSystemProps> = ({ tabs, initialActiveTa
       {/* Left side - Tab navigation */}
       <div className="w-full md:w-2/5">
         <h2 className="ml-5 text-sm uppercase tracking-wider font-serif mb-6">My resume</h2>
-        <div className="ml-5 flex gap-5 relative">
-            <h1 className="text-5xl font-serif mb-12">Samik Nayak</h1>
-            <div className="absolute top-3 right-55"><DownloadResumeButton /></div>
+        <div className="ml-5 flex flex-row gap-5 relative">
+            <h1 className="text-5xl duration-300 font-serif mb-12">Samik Nayak</h1>
+            <div className=""><DownloadResumeButton /></div>
         </div>
         <div className="ml-5 space-y-8">
           {tabs.map((tab) => (
             <div 
               key={tab.id} 
-              className="flex items-center cursor-pointer group"
+              className="group flex items-center cursor-pointer group"
               onClick={() => setActiveTabId(tab.id)}
             >
               <div 
                 className={`w-1 h-12 mr-4 transition-colors duration-300 ${
-                  activeTabId === tab.id ? 'bg-red-500' : 'bg-white'
+                  activeTabId === tab.id ? 'bg-red-500' : 'group-hover:bg-orange-300 bg-white'
                 }`}
               />
               <div>
