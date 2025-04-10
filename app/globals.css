@@ -28,6 +28,7 @@
     1C3255: Optiver Blue
     003E1F: Forest Green
     
+    
     */
     --foreground: #ededed;
   }
@@ -37,4 +38,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans); /* Use Poppins globally */
+}
+
+
+
+.glow-cursor {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: radial-gradient(
+    circle,
+    rgba(70, 70, 125, 0.1) 0%,
+    rgba(70, 70, 125, 0) 50%,
+    rgba(70, 70, 125,0) 90%
+  );
+  mix-blend-mode: screen;
+  transition: width 0.1s, height 0.1s;
 }

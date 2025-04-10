@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import resumeData from './data/resumeData';
 import ResumeTabSystem from '@/components/ResumeTabSystem';
+import CustomCursor from '@/components/CursorGlow';
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
 
   return (
     <div>
+      <CustomCursor />
       <div className="relative h-screen flex flex-col justify-between">
         {/* Main Content */}
         <div className="h-screen flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center">

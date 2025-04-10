@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './DownloadResumeButton.module.css';
+import styles from './styles/DownloadResumeButton.module.css';
 
 const DownloadResumeButton = () => {
   const [isHovered, setIsHovered] = useState(false);
